@@ -159,7 +159,7 @@ const ProductBox: NextPage<productType> = ({ layout, id, item, title, newLabel, 
           </button>
           <div className="row">
             <div className="col-lg-6 col-xs-12">
-              <Slider ref={(slider) => (slider2.current = slider)}>
+              <Slider ref={slider2}>
                 {item &&
                   item.images.map((img: any, i: any) => {
                     return (

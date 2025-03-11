@@ -28,7 +28,7 @@ const ProductSlick: React.FC<ProductSlickProps> = ({ item, bundle, swatch }) => 
   return (
     <>
       <Col lg="5">
-        <Slider className="product-slick" asNavFor={nav2} ref={(slider) => (slider1.current = slider)}>
+        <Slider className="product-slick" asNavFor={nav2} ref={(slider) => { slider1.current = slider; }}>
           {item &&
             item.images.map((img: any, i: any) => {
               return (
@@ -40,7 +40,7 @@ const ProductSlick: React.FC<ProductSlickProps> = ({ item, bundle, swatch }) => 
         </Slider>
         <Row>
           <Col>
-            <Slider className="slider-nav" asNavFor={nav1} ref={(slider) => (slider2.current = slider)} slidesToShow={3} swipeToSlide={true} focusOnSelect={true} arrows={false} adaptiveHeight={true}>
+            <Slider className="slider-nav" asNavFor={nav1} ref={(slider) => { slider2.current = slider; }} slidesToShow={3} swipeToSlide={true} focusOnSelect={true} arrows={false} adaptiveHeight={true}>
               {item &&
                 item.images.map((img: any, i: any) => {
                   return (

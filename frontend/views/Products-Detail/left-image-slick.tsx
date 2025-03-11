@@ -31,7 +31,9 @@ const LeftImageProductSlick: React.FC<LeftImageProductSlickProps> = ({ item }) =
             <Slider
               className="slider-right-nav"
               asNavFor={nav2}
-              ref={(slider) => (slider1.current = slider)}
+              ref={(slider) => {
+                slider1.current = slider;
+              }}
               slidesToShow={3}
               swipeToSlide={true}
               focusOnSelect={true}
@@ -57,7 +59,7 @@ const LeftImageProductSlick: React.FC<LeftImageProductSlickProps> = ({ item }) =
         </Row>
       </Col>
       <Col lg="4" sm="10" xs="12" className="order-up">
-        <Slider className="product-slick" asNavFor={nav1} ref={(slider) => (slider2.current = slider)}>
+        <Slider className="product-slick" asNavFor={nav1} ref={(slider) => { slider2.current = slider; }}>
           {item &&
             item.images.map((img: any, i: any) => {
               return (

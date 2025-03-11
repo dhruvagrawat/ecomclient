@@ -38,7 +38,7 @@ const ThumbnailRightSlick: React.FC<ThumbnailRightSlickProps> = ({ item }) => {
   return (
     <>
       <Col lg="3" sm="10" xs="12" className="order-up">
-        <Slider className="product-slick" asNavFor={nav2} ref={(slider) => (slider1.current = slider)}>
+        <Slider className="product-slick" asNavFor={nav2} ref={(slider) => { slider1.current = slider; }}>
           {item &&
             item.images.map((img: any, i: any) => {
               return (
@@ -52,7 +52,7 @@ const ThumbnailRightSlick: React.FC<ThumbnailRightSlickProps> = ({ item }) => {
       <Col lg="1" sm="2" xs="12">
         <Row>
           <Col>
-            <Slider {...setting1} className="slider-right-nav" asNavFor={nav1} ref={(slider) => (slider2.current = slider)} slidesToShow={3} swipeToSlide={true} focusOnSelect={true} vertical={true}>
+            <Slider {...setting1} className="slider-right-nav" asNavFor={nav1} ref={(slider) => { slider2.current = slider; }} slidesToShow={3} swipeToSlide={true} focusOnSelect={true} vertical={true}>
               {item &&
                 item.images.map((img: any, i: any) => {
                   return (

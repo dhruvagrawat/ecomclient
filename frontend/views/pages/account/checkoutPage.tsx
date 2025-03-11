@@ -308,7 +308,7 @@ const CheckoutPage: NextPage = () => {
                             ) : (
                               <PayPalScriptProvider
                                 options={{
-                                  "client-id": paypalOptions.clientId,
+                                  clientId: paypalOptions.clientId,
                                   components: "buttons",
                                 }}>
                                 <PayPalButtons forceReRender={[cartTotal]} onInit={onSuccess} onError={onError} onApprove={onSuccess} onCancel={onCancel} />

@@ -138,7 +138,7 @@ const HotDeal: NextPage = () => {
                   <Row className="row hot-deal-subcontain">
                     <Col lg="4" md="4">
                       <div className="hotdeal-right-slick border-0">
-                        <Slider asNavFor={nav1} ref={(slider) => (slider2.current = slider)} {...settings}>
+                        <Slider asNavFor={nav1} ref={(slider) => { slider2.current = slider; }} {...settings}>
                           {dataR &&
                             dataR.collection[0].images.map((img: any, i: any) => {
                               return (
@@ -192,7 +192,7 @@ const HotDeal: NextPage = () => {
                       <div className="hotdeal-right-nav">
                         <Slider
                           asNavFor={nav2}
-                          ref={(slider) => (slider1.current = slider)}
+                          ref={(slider) => { slider1.current = slider; }}
                           vertical={true}
                           {...setting1}
                           slidesToShow={2}

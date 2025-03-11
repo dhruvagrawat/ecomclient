@@ -31,7 +31,7 @@ const AccordianSlick: React.FC<ProductSlickProps> = ({ item, accordian, thumbnai
   return (
     <>
       <Col lg="4">
-        <Slider className="product-slick" asNavFor={nav2} ref={(slider) => (slider1.current = slider)}>
+        <Slider className="product-slick" asNavFor={nav2} ref={(slider) => { slider1.current = slider; }}>
           {item &&
             item.images.map((img: any, i: any) => {
               return (
@@ -43,7 +43,7 @@ const AccordianSlick: React.FC<ProductSlickProps> = ({ item, accordian, thumbnai
         </Slider>
         <Row>
           <Col>
-            <Slider className="slider-nav" asNavFor={nav1} ref={(slider) => (slider2.current = slider)} slidesToShow={3} swipeToSlide={true} focusOnSelect={true}>
+            <Slider className="slider-nav" asNavFor={nav1} ref={slider2} slidesToShow={3} swipeToSlide={true} focusOnSelect={true}>
               {item &&
                 item.images.map((img: any, i: any) => {
                   return (

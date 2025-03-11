@@ -13,7 +13,7 @@ jspm_packages/
 # Build directories
 dist/
 build/
-
+.next/
 # Misc
 .DS_Store
 .env

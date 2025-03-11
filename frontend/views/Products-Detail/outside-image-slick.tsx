@@ -67,7 +67,7 @@ const OutsideImageSlick: React.FC<OutsideImageSlickProps> = ({ item }) => {
       {item ? (
         <Row>
           <Col lg="6">
-            <Slider className="product-slick" asNavFor={nav2} ref={(slider) => (slider1.current = slider)}>
+            <Slider className="product-slick" asNavFor={nav2} ref={slider1}>
               {item &&
                 item.images.map((img: any, i: any) => {
                   return (
@@ -231,7 +231,7 @@ const OutsideImageSlick: React.FC<OutsideImageSlickProps> = ({ item }) => {
               <Col className="order-up">
                 <Row className="imgae-outside-thumbnail">
                   <Col xs="12">
-                    <Slider className="slider-nav" asNavFor={nav1} ref={(slider) => (slider2.current = slider)} slidesToShow={3} swipeToSlide={true} focusOnSelect={true}>
+                    <Slider className="slider-nav" asNavFor={nav1} ref={(slider) => { slider2.current = slider; }} slidesToShow={3} swipeToSlide={true} focusOnSelect={true}>
                       {item &&
                         item.images.map((img: any, i: any) => {
                           return (

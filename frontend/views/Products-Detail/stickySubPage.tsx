@@ -65,7 +65,7 @@ const StickySubPage: React.FC = () => {
           </Col>
           {data && (
             <Col lg="7" className="rtl-text">
-              <Sticky boundaryElement=".block" style={{ position: "relative" }} hideOnBoundaryHit={false}>
+              <Sticky boundaryElement=".block" hideOnBoundaryHit={false}>
                 <ProductDetail item={data.product} bundle={false} swatch={false} changeColorVar={null} />
               </Sticky>
             </Col>
